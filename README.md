@@ -25,4 +25,4 @@
 ### Ιnstaller
 Προσφέρεται ένα έτοιμο αρχείο εγκατάστασης για τα Windows.
 
-Μπορείτε να το λάβετε από [εδώ](https://github.com/FilipposPapad/easySign).
+Μπορείτε να το λάβετε από [εδώ](https://github.com/FilipposPapad/easySign/releases/download/v0.9.0-beta.1/easySignSetup.exe).
