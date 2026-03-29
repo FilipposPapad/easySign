@@ -1,0 +1,14 @@
+{
+    "api": {
+        "base_url": "https://sapi.mindigital-shde.gr/Sign/Api",
+        "tsa_url": "http://pki.byte.gr/tsa/server/basic"
+    },
+    "security": {
+        "tss_cert_file": "resources/certs/byte.pem"
+    },
+    "window": {
+        "width": 420,
+        "height": 350,
+        "bgcolor": "#fdfbf4"
+    }
+}

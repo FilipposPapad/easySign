@@ -1,0 +1,12 @@
+# PDF Signing & Certificates
+pyhanko>=0.20.0
+pyhanko-certvalidator>=0.20.0
+
+# HTTP requests
+requests>=2.31.0
+
+# Cryptography & ASN.1
+asn1crypto>=1.5.1
+
+# Secure credentials storage
+keyring>=24.3.0

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.vscode/
+.idea/
+installer/build/
+installer/dist/
+installer/*.exe
+installer/sign.spec
+installer/client.spec
+sources/
+tests/
