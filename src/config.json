@@ -7,8 +7,8 @@
         "tss_cert_file": "resources/certs/byte.pem"
     },
     "window": {
-        "width": 420,
-        "height": 350,
+        "width": 430,
+        "height": 380,
         "bgcolor": "#fdfbf4"
     }
 }
