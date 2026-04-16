@@ -160,7 +160,7 @@ class SignApp:
             command=self.sign_clicked,
         )
         self.btn_sign.grid(
-            row=6, column=0, columnspan=3, ipady=1, pady=15, padx=20, sticky="ew"
+            row=6, column=0, columnspan=3, ipady=1, pady=10, padx=20, sticky="ew"
         )
 
         self.progress = ttk.Progressbar(self.root, mode="indeterminate")
@@ -168,18 +168,45 @@ class SignApp:
             row=7,
             column=0,
             columnspan=3,
-            pady=1,
+            pady=10,
             padx=20,
             sticky="ew",
         )
 
-        self.copyright = ttk.Label(
-            self.root, text="\u00a9Φίλιππος Παπαδακάκης", cursor="hand2"
+        self.separator2 = ttk.Separator(self.root, orient=tk.HORIZONTAL)
+        self.separator2.grid(
+            row=8,
+            column=0,
+            columnspan=3,
+            sticky="ew",
+            pady=3,
+            padx=10,
         )
-        self.copyright.grid(row=8, column=0, columnspan=3, pady=10, padx=10, sticky="e")
+
+        self.copyright = ttk.Label(
+            self.root,
+            text="\u2117 Φίλιππος Παπαδακάκης",
+            cursor="hand2",
+            foreground="#1E6ECA",
+        )
+        self.copyright.grid(row=9, column=0, columnspan=3, pady=1, padx=10, sticky="e")
         self.copyright.bind(
             "<Button-1>",
             lambda e: webbrowser.open_new("https://github.com/FilipposPapad/easySign"),
+        )
+
+        self.donate = ttk.Label(
+            self.root,
+            text="\u2764 Συνεισφέρετε στην προσπάθεια του δημιουργού με μια μικρή δωρεά",
+            cursor="hand2",
+            foreground="#ff4000",
+        )
+        self.donate.grid(row=10, column=0, columnspan=3, pady=1, padx=10, sticky="e")
+        self.donate.bind(
+            "<Button-1>",
+            lambda e: webbrowser.open_new(
+                "https://www.paypal.com/donate/?hosted_button_id=N6WSLKAEFZCH8"
+            ),
         )
 
         style = ttk.Style()
@@ -311,7 +338,9 @@ class SignApp:
         password = self.get_password()
 
         if not username or not password:
-            self.show_error("Παρακαλώ συμπληρώστε πρώτα το Όνομα Χρήστη και τον Κωδικό.")
+            self.show_error(
+                "Παρακαλώ συμπληρώστε πρώτα το Όνομα Χρήστη και τον Κωδικό."
+            )
             return
 
         confirm = messagebox.askyesno(
